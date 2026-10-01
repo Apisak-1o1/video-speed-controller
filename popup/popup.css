@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 300px;
+  font-family: Arial, sans-serif;
+  background: #111827;
+  color: white;
+}
+
+.container {
+  padding: 18px;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+
+.website {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-bottom: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.speed-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.speed-grid button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 5px;
+  background: #374151;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.speed-grid button:hover {
+  background: #4b5563;
+}
+
+.speed-grid button.active {
+  background: #2563eb;
+}
+
+.current {
+  text-align: center;
+  margin: 18px 0;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.current strong {
+  color: #60a5fa;
+  font-size: 20px;
+}
+
+.reset {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  background: #dc2626;
+  color: white;
+  cursor: pointer;
+}
+
+.reset:hover {
+  background: #ef4444;
+}
+
+.shortcut {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #374151;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #9ca3af;
+}
+
+.shortcut div {
+  color: white;
+  margin-bottom: 4px;
+}
+
+.shortcut span {
+  display: inline-block;
+  min-width: 65px;
+  color: #60a5fa;
+}
+
+.speed-grid button:disabled,
+.reset:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.speed-grid button:disabled:hover {
+  background: #374151;
+}
+
+.reset:disabled:hover {
+  background: #dc2626;
+}
+
+.rescan {
+  width: 100%;
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  padding: 9px;
+  background: #374151;
+  color: white;
+  cursor: pointer;
+}
+
+.rescan:hover {
+  background: #4b5563;
+}
+
+.rescan:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

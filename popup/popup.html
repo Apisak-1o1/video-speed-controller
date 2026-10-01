@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Speed Controller</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🎬 Video Speed</h1>
+
+    <div id="website" class="website">
+      กำลังโหลด...
+    </div>
+
+    <div class="speed-grid">
+      <button data-speed="0.5">0.5×</button>
+      <button data-speed="1">1×</button>
+      <button data-speed="1.25">1.25×</button>
+      <button data-speed="1.5">1.5×</button>
+      <button data-speed="2">2×</button>
+    </div>
+
+    <div class="current">
+      ความเร็วปัจจุบัน:
+      <strong id="currentSpeed">1×</strong>
+    </div>
+
+    <button id="reset" class="reset">
+      Reset → 1×
+    </button>
+
+<button id="rescan" class="rescan">
+  🔍 Scan Video อีกครั้ง
+</button>
+
+    <div class="shortcut">
+      <div>⌨️ Keyboard</div>
+      <span>Alt + ↑</span> เพิ่มความเร็ว<br>
+      <span>Alt + ↓</span> ลดความเร็ว<br>
+      <span>Alt + 0</span> กลับ 1×
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+
+</body>
+</html>
