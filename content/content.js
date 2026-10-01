@@ -20,13 +20,17 @@ function setupVideo(video) {
       forceSpeed(video);
     });
 
+    video.addEventListener("durationchange", () => {
+      forceSpeed(video);
+    });
+
     video.addEventListener("play", () => {
       forceSpeed(video);
     });
 
     video.addEventListener("ratechange", () => {
       // JW Player หรือ Player อื่นอาจพยายามเปลี่ยนกลับ
-      if (video.playbackRate !== currentSpeed) {
+      if (video.playbackRate !== getEffectiveSpeed(video)) {
         setTimeout(() => {
           forceSpeed(video);
         }, 0);
@@ -37,9 +41,13 @@ function setupVideo(video) {
   forceSpeed(video);
 }
 
+function getEffectiveSpeed(video) {
+  return video.duration === Infinity ? 1 : currentSpeed;
+}
+
 function forceSpeed(video) {
   try {
-    video.playbackRate = currentSpeed;
+    video.playbackRate = getEffectiveSpeed(video);
   } catch (error) {
     console.log("Cannot set playbackRate", error);
   }
